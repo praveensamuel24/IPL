@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            LOGIN FORM
+        </title>
+        <script language="javascript">
+            function validate()
+            {
+                var f=1;
+                if(document.loginform.pname.value==""||document.loginform.pswd.value=="")
+                {
+                    f=0;
+                }
+    
+                  if(f==1)
+                  {
+                    alert("VALID INPUT");
+                  }
+                  else
+                  {
+                    alert("INVALID INPUT");
+                    document.form.focus();
+    
+                  }
+            }
+        </script>
+        <style>
+             input {
+        flex: 1;
+        background-color: #333;
+        color: #8edd27;
+        border: 1px solid;
+        padding: 0.5rem;
+        text-align: center;
+        text-decoration: none;
+        transition: all 0.5s ease-out;
+}
+input:hover,
+input:focus 
+{
+  background-color: #dd3319;
+  color: #161616;
+}
+        </style>
+    </head>
+    <body bgcolor="yellow">
+        <form name="loginform">
+        <div align="center" >
+            <h style = " font-size:1cm; font-family: 'Algerian', Times, serif; color: rgb(90, 44, 255); ">LOGIN FORM</h><br/><br/>
+            USERNAME : <input type="text" placeholder="Enter playername" name="pname"><br/><br/>
+            PASSWORD : <input type="password" placeholder="Enter password" name="pswd"><br/><br/>
+        </div>
+        <div align="center">
+            <input type="submit" value="Login" onclick="validate()">
+            <input type="reset" value="Clear">
+            <input type="button" value="Register" onClick="window.location.href='register.html';">
+        </div>
+    </form>
+    </body>
+</html>
